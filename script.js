@@ -71,4 +71,22 @@ document.getElementById("btn-reset").addEventListener("click", () => {
   refrescarContador();
 });
 
+// ---------- 4. Mano saludadora: cuenta y lanza "¡Hola, Mundo!" ----------
+const btnMano = document.getElementById("btn-mano");
+const saludo = document.getElementById("saludo-flotante");
+
+function saludarMano() {
+  contador++;                 // cada saludo suma uno, igual que el botón +
+  refrescarContador();
+
+  // Reiniciamos las animaciones para que vuelvan a dispararse en clics seguidos
+  btnMano.classList.remove("sacudiendo");
+  saludo.classList.remove("visible");
+  void btnMano.offsetWidth;   // truco: fuerza un "repaint" para reiniciar la animación
+  btnMano.classList.add("sacudiendo");
+  saludo.classList.add("visible");
+}
+
+btnMano.addEventListener("click", saludarMano);
+
 refrescarContador();
