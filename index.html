@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hola Mundo · Hecho con OpenCode</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,11 +12,14 @@
   <!-- Navegación -->
   <nav class="navbar">
     <a class="logo" href="#">⌘ hola-mundo</a>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#caracteristicas">Características</a></li>
-      <li><a href="#contador">Demo</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#contador">Demo</a></li>
+      </ul>
+      <button id="toggle-tema" class="btn-tema" aria-label="Cambiar tema">☀️</button>
+    </div>
   </nav>
 
   <!-- Sección principal -->

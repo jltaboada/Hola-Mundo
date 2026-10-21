@@ -13,6 +13,20 @@
   --acento: #d2a8ff;         /* violeta suave */
   --acento-2: #58a6ff;       /* azul */
   --exito: #3fb950;          /* verde */
+  --navbar-fondo: rgba(13, 17, 23, 0.85);
+}
+
+/* Paleta clara: se activa cuando JS pone data-tema="claro" en <html> */
+html[data-tema="claro"] {
+  --fondo: #f6f8fa;
+  --fondo-suave: #ffffff;
+  --borde: #d0d7de;
+  --texto: #1f2328;
+  --texto-suave: #59636e;
+  --acento: #8250df;         /* violeta con suficiente contraste en claro */
+  --acento-2: #0969da;       /* azul más oscuro */
+  --exito: #1a7f37;
+  --navbar-fondo: rgba(246, 248, 250, 0.85);
 }
 
 /* Reset básico */
@@ -32,6 +46,7 @@ body {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* ---------- Navegación ---------- */
@@ -42,10 +57,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(13, 17, 23, 0.85);
+  background: var(--navbar-fondo);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--borde);
   z-index: 10;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .logo {
@@ -69,6 +90,24 @@ body {
 
 .nav-links a:hover {
   color: var(--texto);
+}
+
+/* ---------- Botón de tema claro/oscuro ---------- */
+.btn-tema {
+  background: var(--fondo-suave);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  border-radius: 8px;
+  padding: 0.4rem 0.65rem;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.btn-tema:hover {
+  border-color: var(--acento);
+  transform: scale(1.12);
 }
 
 /* ---------- Hero ---------- */

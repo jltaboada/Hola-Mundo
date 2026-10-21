@@ -3,6 +3,23 @@
    Interactividad con JavaScript
    ============================================ */
 
+// ---------- 0. Selector de tema claro/oscuro ----------
+const htmlEl = document.documentElement;
+const btnTema = document.getElementById("toggle-tema");
+
+function aplicarTema(tema) {
+  htmlEl.dataset.tema = tema;
+  btnTema.textContent = tema === "claro" ? "🌙" : "☀️";
+  localStorage.setItem("tema", tema); // para recordarlo al recargar
+}
+
+// Recuperamos el tema elegido la última vez (por defecto: oscuro)
+aplicarTema(localStorage.getItem("tema") || "oscuro");
+
+btnTema.addEventListener("click", () => {
+  aplicarTema(htmlEl.dataset.tema === "claro" ? "oscuro" : "claro");
+});
+
 // ---------- 1. Efecto máquina de escribir en el título ----------
 const TEXTO = "¡Hola, Mundo! 👋";
 const typewriter = document.getElementById("typewriter");
