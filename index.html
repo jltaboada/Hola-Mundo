@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hola Mundo · Hecho con OpenCode</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <a class="logo" href="#">⌘ hola-mundo</a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#contador">Demo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección principal -->
+  <header id="inicio" class="hero">
+    <p class="hero-badge">🚀 Mi primera página hecha con OpenCode</p>
+    <h1 class="hero-title">
+      <span id="typewriter" aria-label="Hola Mundo"></span><span class="cursor">▍</span>
+    </h1>
+    <p class="hero-subtitle">
+      Un sencillo «Hola mundo» construido únicamente con
+      <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>.
+      Sin frameworks, sin dependencias, sin complicaciones.
+    </p>
+    <div class="hero-actions">
+      <a href="#caracteristicas" class="btn btn-primary">Ver características</a>
+      <a href="#contador" class="btn btn-ghost">Probar la demo</a>
+    </div>
+  </header>
+
+  <!-- Características -->
+  <main id="caracteristicas" class="features">
+    <h2 class="section-title">¿Qué tiene esta página?</h2>
+    <div class="cards">
+      <article class="card">
+        <span class="card-icon">🌓</span>
+        <h3>Tema oscuro</h3>
+        <p>Paleta de colores oscura y moderna, pensada para descansar la vista.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">⚡</span>
+        <h3>Sin frameworks</h3>
+        <p>Solo archivos planos: si lo abres en el navegador, simplemente funciona.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">📱</span>
+        <h3>Responsive</h3>
+        <p>Se adapta a móvil, tablet y escritorio con un poco de CSS moderno.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon">🤖</span>
+        <h3>Hecho con IA</h3>
+        <p>Generada descrito en una frase… y escrita en segundos por OpenCode.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- Demo interactiva -->
+  <section id="contador" class="demo">
+    <h2 class="section-title">Pequeña demo de JavaScript</h2>
+    <p class="demo-text">Cada número par ira acompañado de un toque de color 👇</p>
+    <div class="counter-box">
+      <button id="btn-restar" class="btn btn-ghost" aria-label="Restar uno">−</button>
+      <span id="contador">0</span>
+      <button id="btn-sumar" class="btn btn-primary" aria-label="Sumar uno">+</button>
+    </div>
+    <button id="btn-reset" class="btn btn-ghost btn-small">Reiniciar</button>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>
+      Hecho con 💚 usando <strong>OpenCode</strong> ·
+      <span id="anio"></span> · HTML + CSS + JS
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
